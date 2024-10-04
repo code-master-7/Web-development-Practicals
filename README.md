@@ -1,1 +1,1 @@
-"# Web-development-Practicals" 
+# shortes possible code ENJOY 🥳 
