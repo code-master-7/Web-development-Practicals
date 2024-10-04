@@ -1,0 +1,28 @@
+<html><head><title>Event Handlers & Form Validation</title>
+  <style>body { text-align: center; margin-top: 50px; }#heading { color: black; }
+  </style></head><body onload="alert('Welcome!')">
+  <h1 id="heading" onmouseover="this.style.color='yellow';" onmouseout="this.style.color='black';">Hover over me!</h1>
+  <button onclick="document.body.style.background='red'">Red</button>
+  <button onclick="document.body.style.background='green'">Green</button>
+  <button onclick="document.getElementById('time').innerHTML = new Date()">Find Time</button>
+  <p id="time"></p>  <form onsubmit="return validateForm()">
+    <input type="text" id="username" placeholder="Username"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <input type="date" id="dob" placeholder="DOB"><br>
+    <input type="email" id="email" placeholder="Email"><br>
+    <input type="text" id="phone" placeholder="Phone No."><br>
+    <button type="submit">Submit</button>
+  </form>  <script>
+    window.addEventListener('beforeunload',(event)=>{ event.preventDefault(); event.returnValue("Bye") })
+    function validateForm() {
+      let u = document.getElementById('username').value,
+          p = document.getElementById('password').value,
+          e = document.getElementById('email').value,
+          ph = document.getElementById('phone').value;
+      if (!u || !p || !e || !ph) { alert('Fields cannot be empty'); return false; }
+      if (!/^[a-zA-Z]/.test(u)) { alert('Username must not start with special character/number'); return false; }
+      if (!/^\d{10}$/.test(ph) || !/^9|8/.test(ph[0])) { alert('Phone must start with 9 or 8 and have 10 digits'); return false; }
+      if (!/@.+\./.test(e)) { alert('Email must contain @ and .'); return false; }
+      if (!/^(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{6,12}$/.test(p)) { alert('Password must be 6-12 characters with 1 special character'); return false; }
+      return true;}
+</script></body></html>

@@ -1,0 +1,33 @@
+<html><head><title>JavaScript Tasks</title>
+    <script>
+      function checkNumber() {
+        var num = parseFloat(document.getElementById("num1").value);
+        var result =
+          num < 50
+            ? `${num} is less than 50.`
+            : num > 50
+            ? `${num} is greater than 50.`
+            : `${num} is exactly 50.`;
+        document.getElementById("result1").innerText = result;
+      }
+      function addNumbers() {
+        var num1 = parseFloat(document.getElementById("num2").value);
+        var num2 = parseFloat(document.getElementById("num3").value);
+        var sum = num1 + num2;
+        document.getElementById("result2").innerText = `The sum is ${sum}.`;
+      }
+      function checkEvenOdd() {
+        var num = parseFloat(document.getElementById("num4").value);
+        var result = num % 2 === 0 ? `${num} is even.` : `${num} is odd.`;
+        document.getElementById("result3").innerText = result;
+      }
+    </script></head><body>
+    <h1>JavaScript Tasks</h1>
+    <h2>1. Number Comparison</h2><input type="number" id="num1"/>
+    <button onclick="checkNumber()">Check</button><p id="result1"></p>
+    <h2>2. Add Two Numbers</h2>
+    <input type="number" id="num2"/><input type="number" id="num3"/>
+    <button onclick="addNumbers()">Add</button><p id="result2"></p>
+    <h2>3. Even or Odd</h2><input type="number" id="num4"/>
+    <button onclick="checkEvenOdd()">Check</button><p id="result3"></p>
+  </body></html>

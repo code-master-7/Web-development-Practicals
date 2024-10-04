@@ -1,0 +1,49 @@
+<html><head><style>
+      nav, footer { display: flex; align-items: center; justify-content: space-between; background-color: #f1f1f1; padding: 10px; }
+      nav { padding-left: 10px; padding-right: 10px; }
+      .container { display: flex; gap: 20px; justify-content: center; }
+      .createAcc { color: #ff5645; text-decoration: none; margin: 20px 0; font-size: 20px; display: inline-block; }
+      .card { display: flex; gap: 10px; padding-bottom: 20px; }
+      .card-img img { width: 300px; height: auto; }
+      .card-data { display: flex; flex-direction: column; gap: 10px; width: 300px; }
+      .card-title { font-size: 25px; }
+      .card-des { color: #969696; }
+      .formContainer { display: flex; flex-direction: column; }
+      .form { background-color: #f1f1f1; padding: 18px; width: 400px; margin-top: 60px; display: flex; flex-direction: column; gap: 20px; }
+      .inp { display: flex; justify-content: space-evenly; align-items: center; gap: 10px; }
+      .specialInp input, .specialInp select { width: 100%; padding: 5px; }
+      .head { font-weight: 700; }
+      .nextBtn { align-self: flex-end; padding: 10px 30px; background-color: #1e69ff; color: #fff; border: none; outline: none; }
+      .links { display: flex; align-items: center; gap: 10px; }
+      .lan { display: flex; align-items: center; justify-content: center; }
+    </style></head>
+  <body>
+      <nav><img src="googleImg.webp" style="height: 40px" /><button>Sign in</button></nav>
+      <div class="container"><div class="feed">
+        <a href="#" class="createAcc">Create a new Google Account</a>
+        <div class="card"><div class="card-img"><img src="c1.png" /></div><div class="card-data"><div class="card-title">Your Google Account is more than just Gmail.</div><div class="card-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tempora porro dolorum, ea eveniet...</div></div></div>
+        <div class="card"><div class="card-img"><img src="c2.png" /></div><div class="card-data"><div class="card-title">Take it all with you.</div><div class="card-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsam dolore amet temporibus...</div></div></div>
+        <div class="card"><div class="card-img"><img src="c3.png" /></div><div class="card-data"><div class="card-title">Share a little. Or share a lot.</div><div class="card-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa est qui...</div></div></div>
+        <div class="card"><div class="card-img"><img src="c4.png" /></div><div class="card-data"><div class="card-title">Work in the future.</div><div class="card-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nesciunt...</div></div></div>
+      </div><div class="formContainer"><div class="form">
+          <div class="feild"><div class="head">Name</div><div class="inp specialInp"><input type="text" placeholder="First" /><input type="text" placeholder="Last" /></div></div>
+          <div class="feild"><div class="head">Choose your Username</div><div class="inp uNameInp specialInp"><input type="email" placeholder="@gmail.com" /></div></div>
+          <div class="feild"><div class="head">Create a Password</div><div class="inp specialInp"><input type="password" /></div></div>
+          <div class="feild"><div class="head">Confirm your Password</div><div class="inp specialInp"><input type="password" /></div></div>
+          <div class="feild"><div class="head">Birthday</div><div class="inp specialInp"><select name="mon" style="background: none; border: 1px solid black"><option>Month</option></select><input type="text" placeholder="Date" /><input type="text" placeholder="Year" /></div></div>
+          <div class="feild"><div class="head">Gender</div><div class="inp specialInp"><select name="gen"><option value="Male">I am</option></select></div></div>
+          <div class="feild"><div class="head">Mobile phone</div><div class="inp specialInp"><input type="number" /></div></div>
+          <div class="feild"><div class="head">Your current email address</div><div class="inp specialInp"><input type="email" /></div></div>
+          <div class="feild"><div class="head">Prove you're not a robot</div><div class="inp"><input type="checkbox" />Skip this verification (Phone verification may be required)</div></div>
+          <div class="imgCaptcha"><img src="captcha.png" /></div>
+          <div class="feild"><div class="head">Location</div><div class="inp specialInp"><select name="loc" style="background: none"><option value="india">India</option></select></div></div>
+          <div class="feild"><input type="checkbox" />I agree to the Google <a href="#">Terms of service</a> and <a href="#">Privacy Policy</a></div>
+          <div class="feild"><input type="checkbox" />Google may use my account info to personalize -1's on content and ads on non-Google websites. <a href="#">About personalization</a></div>
+          <button class="nextBtn">Next Step</button></div>
+        <div style="text-align: center; color: #969696; margin: 18px 0"><a href="#">Learn more</a> about why we ask for this information</div>
+      </div></div><footer>
+      <div class="links"><div>&copy; 2013 Google</div><div>Terms of Service</div><div>Privacy</div><div>Policy</div><div>Help</div></div>
+      <div class="lan"><img src="message-language.svg" alt="" /><select name="lan"><option value="Eng">English (United States)</option></select></div>
+      </footer>
+  </body>
+</html>
