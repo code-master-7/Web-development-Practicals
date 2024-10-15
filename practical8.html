@@ -6,17 +6,17 @@
   <button onclick="document.body.style.background='green'">Green</button>
   <button onclick="document.getElementById('time').innerHTML = new Date()">Find Time</button>
   <p id="time"></p>  <form onsubmit="return validateForm()">
-    <input type="text" id="username" placeholder="Username"><br>
-    <input type="password" id="password" placeholder="Password"><br>
-    <input type="date" id="dob" placeholder="DOB"><br>
-    <input type="email" id="email" placeholder="Email"><br>
-    <input type="text" id="phone" placeholder="Phone No."><br>
+    <input type="text" id="u_name"><br>
+    <input type="password" id="pass"><br>
+    <input type="date" id="dob"><br>
+    <input type="email" id="email"><br>
+    <input type="text" id="phone"><br>
     <button type="submit">Submit</button>
   </form>  <script>
     window.addEventListener('beforeunload',(event)=>{ event.preventDefault(); event.returnValue("Bye") })
     function validateForm() {
-      let u = document.getElementById('username').value,
-          p = document.getElementById('password').value,
+      let u = document.getElementById('u_name').value,
+          p = document.getElementById('pass').value,
           e = document.getElementById('email').value,
           ph = document.getElementById('phone').value;
       if (!u || !p || !e || !ph) { alert('Fields cannot be empty'); return false; }
